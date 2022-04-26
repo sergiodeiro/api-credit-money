@@ -5,6 +5,7 @@ module.exports = (req,res,next) => {
 
     if(bundle.erros){
         const errors = parseErrors(bundle.errors)
+        console.log(erros);
         res.status(500).json({errors})
     } else {
         next()
